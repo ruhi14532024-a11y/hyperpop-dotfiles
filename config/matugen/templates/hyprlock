@@ -1,0 +1,9 @@
+# matugen — kilit duvar kağıdından üretilir, elle değiştirme
+$lk_card = rgba({{colors.surface_container_highest.default.red}}, {{colors.surface_container_highest.default.green}}, {{colors.surface_container_highest.default.blue}}, 0.78)
+$lk_soft = rgba({{colors.surface_container_highest.default.red}}, {{colors.surface_container_highest.default.green}}, {{colors.surface_container_highest.default.blue}}, 0.85)
+$lk_frame = rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.35)
+$lk_line = rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.55)
+$lk_time = rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 1)
+$lk_date = rgba({{colors.tertiary.default.red}}, {{colors.tertiary.default.green}}, {{colors.tertiary.default.blue}}, 0.85)
+$lk_text = rgba({{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}, 1)
+$lk_inner = rgba({{colors.background.default.red}}, {{colors.background.default.green}}, {{colors.background.default.blue}}, 0.85)

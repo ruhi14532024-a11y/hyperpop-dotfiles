@@ -1,0 +1,23 @@
+[config]
+version_check = false
+caching = true
+# prefer kapalı: index kullanılsın
+fallback_color = "#e8a04c"
+
+[config.wallpaper]
+set = false
+command = "true"
+
+[templates.waybar]
+input_path = '/home/suleyman/.config/matugen/templates/waybar.css'
+output_path = '/home/suleyman/.config/waybar/matugen.css'
+post_hook = 'pkill -SIGUSR2 -x waybar'
+
+[templates.rofi]
+input_path = '/home/suleyman/.config/matugen/templates/rofi.rasi'
+output_path = '/home/suleyman/.config/rofi/matugen.rasi'
+
+[templates.rofifx]
+input_path = '/home/suleyman/.config/matugen/templates/rofi-fx'
+output_path = '/home/suleyman/.config/rofi/fx-colors'
+

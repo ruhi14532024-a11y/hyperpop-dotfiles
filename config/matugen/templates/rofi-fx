@@ -1,0 +1,6 @@
+# matugen — rofi-fx açılış iskeleti renkleri, duvar kağıdından üretilir
+bg={{colors.background.default.hex}}
+surface={{colors.surface_container_highest.default.hex}}
+accent={{colors.primary.default.hex}}
+light={{colors.on_surface.default.hex}}
+darktext={{colors.on_primary.default.hex}}

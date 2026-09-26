@@ -1,0 +1,11 @@
+[config]
+version_check = false
+caching = true
+
+[config.wallpaper]
+set = false
+command = "true"
+
+[templates.lock]
+input_path = '/home/suleyman/.config/matugen/templates/hyprlock'
+output_path = '/home/suleyman/.config/hypr/hyprlock-colors.conf'

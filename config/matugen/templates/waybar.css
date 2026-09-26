@@ -1,0 +1,12 @@
+/* matugen — duvar kağıdından üretilir, elle değiştirme */
+@define-color m_bg {{colors.background.default.hex}};
+@define-color m_surface {{colors.surface_container.default.hex}};
+@define-color m_bar alpha(@m_surface, 0.82);
+@define-color m_primary {{colors.primary.default.hex}};
+@define-color m_on_primary {{colors.on_primary.default.hex}};
+@define-color m_secondary {{colors.secondary.default.hex}};
+@define-color m_tertiary {{colors.tertiary.default.hex}};
+@define-color m_onsurf {{colors.on_surface.default.hex}};
+@define-color m_muted {{colors.outline.default.hex}};
+@define-color m_urgent {{colors.error.default.hex}};
+@define-color m_frame alpha(@m_primary, 0.28);

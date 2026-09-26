@@ -1,0 +1,216 @@
+/* ─────────────────────────────────────────────
+   HYPERPOP // rofi drun — cam + neon
+   Super+D için aşırı havalı uygulama arayüzü
+   ───────────────────────────────────────────── */
+
+* {
+    font: "Monocraft, FantasqueSansM Nerd Font 14";
+
+    bg0:     #040209f2;
+    bg1:     #1b1e25e6;
+    bg2:     #232839f2;
+    bg3:     #2e3650f2;
+    fg0:     #d3d9e1;
+    fg1:     #93979d;
+    fg2:     #7987a1;
+    accent:  #33ccff;
+    accent2: #89b4fa;
+    accent3: #a37be8;
+    urgent:  #f85149;
+    good:    #3fb950;
+
+    background-color: transparent;
+    text-color: @fg0;
+
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+/* matugen renkleri (duvar kağıdından) — yukarıdaki sabitleri ezer */
+@import "/home/suleyman/.config/rofi/matugen.rasi"
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 760px;
+    height: 560px;
+    background-color: @bg0;
+    border: 1px solid;
+    border-color: @accent;
+    border-radius: 10px;
+}
+
+mainbox {
+    padding: 18px;
+    spacing: 12px;
+    children: [ inputbar, mode-switcher, listview, message ];
+}
+
+/* ── ARAMA BARı ── */
+inputbar {
+    padding: 8px 8px 8px 8px;
+    spacing: 12px;
+    children: [ prompt, entry ];
+    background-color: @bg1;
+    border: 1px solid;
+    border-color: #33ccff55;
+    border-radius: 8px;
+}
+
+prompt {
+    enabled: true;
+    expand: false;
+    font: "FantasqueSansM Nerd Font 18";
+    text-color: #040209;
+    background-color: @accent;
+    padding: 10px 14px;
+    border-radius: 6px;
+    vertical-align: 0.5;
+}
+
+entry {
+    font: "Monocraft, FantasqueSansM Nerd Font 17";
+    placeholder: "Uygulama ara...  (örn: firefox)";
+    placeholder-color: @fg1;
+    background-color: transparent;
+    text-color: @fg0;
+    vertical-align: 0.5;
+}
+
+/* ── MOD HAPLARI ── */
+mode-switcher {
+    spacing: 10px;
+    background-color: transparent;
+}
+
+button {
+    font: "Monocraft, FantasqueSansM Nerd Font 12";
+    padding: 8px 14px;
+    spacing: 6px;
+    background-color: @bg2;
+    text-color: @fg1;
+    border-radius: 6px;
+    border: 1px solid;
+    border-color: transparent;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: #33ccff26;
+    text-color: @accent;
+    border-color: #33ccff66;
+}
+
+button urgent, button active {
+    text-color: @accent2;
+}
+
+/* ── LİSTE ── */
+listview {
+    lines: 7;
+    columns: 1;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 6px;
+    padding: 2px;
+    scrollbar: true;
+    dynamic: false;
+}
+
+scrollbar {
+    width: 6px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 6px;
+    handle-width: 6px;
+    handle-color: #33ccff66;
+}
+
+element {
+    padding: 10px 14px;
+    spacing: 14px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg0;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color: @urgent;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color: @accent2;
+}
+
+element alternate.normal {
+    background-color: #ffffff08;
+    text-color: @fg0;
+}
+
+element alternate.urgent {
+    background-color: #ffffff08;
+    text-color: @urgent;
+}
+
+element alternate.active {
+    background-color: #ffffff08;
+    text-color: @accent2;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: #040209;
+    border-color: @accent2;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: #ffffff;
+}
+
+element selected.active {
+    background-color: @accent2;
+    text-color: #040209;
+}
+
+element-icon {
+    size: 38px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font: "Monocraft, FantasqueSansM Nerd Font 14";
+    vertical-align: 0.5;
+    highlight: bold #a37be8;
+}
+
+/* ── ALT MESAJ / HİNT ── */
+message {
+    padding: 0;
+    background-color: transparent;
+}
+
+textbox {
+    padding: 8px 14px;
+    background-color: @bg1;
+    border-radius: 6px;
+    border: 1px solid;
+    border-color: #2e365066;
+    text-color: @fg2;
+    font: "Monocraft, FantasqueSansM Nerd Font 11";
+    horizontal-align: 0.5;
+}

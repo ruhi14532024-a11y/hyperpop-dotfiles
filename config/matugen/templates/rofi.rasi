@@ -1,0 +1,12 @@
+/* matugen — duvar kağıdından üretilir, elle değiştirme */
+* {
+    bg0:     {{colors.background.default.hex}}f2;
+    bg1:     {{colors.surface_container.default.hex}}e6;
+    bg2:     {{colors.surface_container_highest.default.hex}};
+    bg3:     {{colors.surface_bright.default.hex}};
+    fg0:     {{colors.on_surface.default.hex}};
+    fg1:     {{colors.outline.default.hex}};
+    accent:  {{colors.primary.default.hex}};
+    urgent:  {{colors.error.default.hex}};
+    selected: {{colors.primary.default.hex}};
+}

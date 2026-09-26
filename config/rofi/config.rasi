@@ -1,0 +1,37 @@
+configuration {
+    modi: "drun,run,bring:/home/suleyman/.config/rofi/windows-bring.sh,filebrowser";
+    combi-modes: "drun,run,bring,filebrowser";
+
+    show-icons: true;
+    icon-theme: "Papirus";
+    terminal: "kitty";
+    font: "Monocraft, FantasqueSansM Nerd Font 14";
+
+    drun-display-format: "{name}";
+    display-drun: "  Uygulamalar";
+    display-run: "  Komut";
+    display-bring: "  Pencereler";
+    display-filebrowser: "  Dosyalar";
+
+    matching: "fuzzy";
+    tokenize: true;
+    sort: true;
+    sorting-method: "fzf";
+    case-sensitive: false;
+    case-smart: true;
+    cycle: true;
+    sidebar-mode: true;
+    hover-select: false;
+    scroll-method: 1;
+    normalize-match: true;
+    disable-history: false;
+    click-to-exit: true;
+    auto-select: false;
+
+    threads: 0;
+    eh: 2;
+    lines: 7;
+    fixed-num-lines: true;
+}
+
+@theme "~/.config/rofi/theme.rasi"

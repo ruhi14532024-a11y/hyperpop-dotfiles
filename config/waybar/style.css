@@ -1,0 +1,114 @@
+@import "matugen.css";
+/* matugen renkleriyle cam bar — renkler matugen.css'ten gelir */
+
+* {
+    min-height: 0;
+    min-width: 0;
+    font-family: "Monocraft", "FantasqueSansM Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+window#waybar {
+    background-color: transparent;
+    margin: 9px 10px 0;
+    border-radius: 0;
+}
+
+/* ── çalışma alanları ── */
+#workspaces {
+    background-color: @m_bar;
+    border: 1px solid @m_frame;
+    margin: 0.4rem 0.25rem;
+    padding: 0 0.35rem;
+    border-radius: 13px;
+}
+
+#workspaces button {
+    padding: 0.25rem 0.1rem;
+    margin: 0.4rem 0.22rem;
+    min-width: 1.9rem;
+    border-radius: 9px;
+    background-color: transparent;
+    color: @m_muted;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#workspaces button:hover {
+    background-color: @m_frame;
+    color: @m_onsurf;
+}
+
+#workspaces button.active {
+    background-color: @m_primary;
+    color: @m_on_primary;
+    box-shadow: 0 0 8px @m_primary;
+}
+
+#workspaces button.urgent {
+    background-color: @m_urgent;
+    color: @m_onsurf;
+}
+
+#workspaces button.empty {
+    color: @m_muted;
+}
+
+/* ── sağ modüller: tek cam şerit ── */
+#tray,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#clock,
+#battery,
+#custom-power {
+    padding: 0.25rem 0.7rem;
+    margin: 0.4rem 0;
+    background-color: @m_bar;
+    border-top: 1px solid @m_frame;
+    border-bottom: 1px solid @m_frame;
+}
+
+#tray {
+    border-radius: 13px;
+    border: 1px solid @m_frame;
+    margin-right: 0.5rem;
+}
+
+#cpu { border-radius: 13px 0 0 13px; border-left: 1px solid @m_frame; }
+#custom-power { border-radius: 0 13px 13px 0; border-right: 1px solid @m_frame; }
+
+#cpu          { color: @m_primary; }
+#memory       { color: @m_secondary; }
+#network      { color: @m_tertiary; }
+#network.disconnected { color: @m_urgent; }
+#pulseaudio   { color: @m_secondary; }
+#clock        { color: @m_onsurf; font-size: 14px; }
+#battery      { color: @m_tertiary; }
+#custom-power { color: @m_primary; }
+
+#pulseaudio.muted   { color: @m_muted; }
+#battery.warning    { color: @m_tertiary; }
+#battery.critical   { color: @m_urgent; }
+#battery.charging   { color: @m_primary; }
+
+#tray menu {
+    background-color: @m_bg;
+    border: 1px solid @m_frame;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+tooltip {
+    background-color: @m_bg;
+    border: 1px solid @m_frame;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @m_onsurf;
+    padding: 4px;
+}
