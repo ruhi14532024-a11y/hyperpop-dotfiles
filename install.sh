@@ -12,14 +12,22 @@ warn()  { echo -e "\033[1;33mUYARI:\033[0m $*"; }
 hata()  { echo -e "\033[1;31mHATA:\033[0m $*"; }
 
 # 1) bağımlılıklar -------------------------------------------------------
-DEPS=(hyprland waybar rofi kitty awww matugen jq python-pillow ffmpeg
-      grim slurp brightnessctl playerctl wireplumber nm-applet swaync
-      hyprlock dolphin gtk-layer-shell)
-BUILD_DEPS=(gcc pkg-config gtk3)
+# "paket:komut" — komut yoksa paket adından kontrol edilir
+DEPS=(hyprland:Hyprland waybar:waybar rofi:rofi kitty:kitty awww:awww-daemon
+      matugen:matugen jq:jq ffmpeg:ffmpeg grim:grim slurp:slurp
+      brightnessctl:brightnessctl playerctl:playerctl wireplumber:wpctl
+      network-manager-applet:nm-applet swaync:swaync hyprlock:hyprlock
+      dolphin:dolphin gtk-layer-shell: gtk3: gcc:gcc pkg-config:pkg-config)
 MISSING=()
-for p in "${DEPS[@]}" "${BUILD_DEPS[@]}"; do
-    pacman -Q "$p" >/dev/null 2>&1 || MISSING+=("$p")
+for pair in "${DEPS[@]}"; do
+    pkg="${pair%%:*}"; bin="${pair##*:}"
+    if [ -n "$bin" ]; then
+        command -v "$bin" >/dev/null 2>&1 || pacman -Q "$pkg" >/dev/null 2>&1 || MISSING+=("$pkg")
+    else
+        pacman -Q "$pkg" >/dev/null 2>&1 || MISSING+=("$pkg")
+    fi
 done
+python3 -c "import PIL" >/dev/null 2>&1 || MISSING+=("python-pillow")
 if [ "${#MISSING[@]}" -gt 0 ]; then
     warn "Eksik paketler: ${MISSING[*]}"
     read -rp "sudo pacman -S ile kurulsun mu? [e/H] " yn
