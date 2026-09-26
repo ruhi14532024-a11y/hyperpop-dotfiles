@@ -29,7 +29,7 @@ Kurucu eksikleri sorup `pacman` ile kurmayı teklif eder.
 ## 🚀 Kurulum
 
 ```bash
-git clone https://github.com/KULLANICI/hyperpop-dotfiles.git
+git clone https://github.com/ruhi14532024-a11y/hyperpop-dotfiles.git
 cd hyperpop-dotfiles
 ./install.sh
 ```
