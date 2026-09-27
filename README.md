@@ -49,6 +49,7 @@ Then log out and back in (or `hyprctl reload`).
 | Key | Action |
 |---|---|
 | `Super+D` | App launcher (rofi) |
+| `Super+C` | Control center (bar/theme/rofi settings) |
 | `Super+W` | Wallpaper gallery |
 | `Super+L` | Lock screen |
 | `Super+Q` | Terminal |
@@ -133,6 +134,7 @@ Sonra çıkış yapıp tekrar gir (veya `hyprctl reload`).
 | Tuş | İş |
 |---|---|
 | `Super+D` | Uygulama launcher (rofi) |
+| `Super+C` | Kontrol merkezi (bar/tema/rofi ayarı) |
 | `Super+W` | Duvar kağıdı galerisi |
 | `Super+L` | Ekranı kilitle |
 | `Super+Q` | Terminal |
