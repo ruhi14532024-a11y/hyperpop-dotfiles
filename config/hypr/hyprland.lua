@@ -8,7 +8,7 @@
 ------------------
 
 -- See https://wiki.hypr.land/configuring/core/monitors/
-hl.monitor({ output = "eDP-1", mode = "preferred", position = "auto", scale = 1 })
+hl.monitor({ output = "eDP-1", mode = "1920x1080@60", position = "auto", scale = 1 })
 hl.monitor({ output = "HDMI-A-1", mode = "preferred", position = "auto", scale = 1 })
 
 
@@ -93,7 +93,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
+            enabled   = false,
             size      = 3,
             passes    = 1,
             vibrancy  = 0.1696,
