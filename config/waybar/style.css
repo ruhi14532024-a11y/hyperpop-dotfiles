@@ -151,7 +151,7 @@ window#waybar.left #battery,
 window#waybar.right #battery,
 window#waybar.left #custom-power,
 window#waybar.right #custom-power {
-    padding: 1.15rem 0.2rem;
+    padding: 1.45rem 0.2rem;
     margin: 0 0.35rem;
     font-size: 13px;
     background-color: @m_bar;
