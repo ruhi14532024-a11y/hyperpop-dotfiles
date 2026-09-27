@@ -121,15 +121,15 @@ window#waybar.right #workspaces {
 
 window#waybar.left #workspaces button,
 window#waybar.right #workspaces button {
-    padding: 0.35rem 0.1rem;
-    margin: 0.2rem 0.25rem;
+    padding: 0.6rem 0.1rem;
+    margin: 0.22rem 0.25rem;
     font-size: 13px;
     min-width: 1.9rem;
 }
 
 window#waybar.left #tray,
 window#waybar.right #tray {
-    padding: 0.4rem 0.3rem;
+    padding: 0.7rem 0.3rem;
     margin: 0 0.35rem 0.4rem;
     font-size: 13px;
     background-color: @m_bar;
@@ -151,7 +151,7 @@ window#waybar.left #battery,
 window#waybar.right #battery,
 window#waybar.left #custom-power,
 window#waybar.right #custom-power {
-    padding: 0.45rem 0.2rem;
+    padding: 1.15rem 0.2rem;
     margin: 0 0.35rem;
     font-size: 13px;
     background-color: @m_bar;
