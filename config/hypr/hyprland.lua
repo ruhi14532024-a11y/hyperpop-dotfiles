@@ -126,9 +126,12 @@ hl.animation({ leaf = "layers",          enabled = true, speed = 3, bezier = "ea
 hl.animation({ leaf = "layersIn",        enabled = true, speed = 3, bezier = "easeOut",    style = "slide" })
 hl.animation({ leaf = "layersOut",       enabled = true, speed = 2, bezier = "easeIn",     style = "slide" })
 
--- Static workspaces 1-9
-for i = 1, 9 do
-    hl.workspace_rule({ workspace = tostring(i), persistent = true })
+-- Static workspaces: 1-8 HDMI-A-1 (ana ekran), 9-10 eDP-1
+for i = 1, 8 do
+    hl.workspace_rule({ workspace = tostring(i), monitor = "HDMI-A-1", persistent = true })
+end
+for _, i in ipairs({ 9, 10 }) do
+    hl.workspace_rule({ workspace = tostring(i), monitor = "eDP-1", persistent = true })
 end
 
 -- See https://wiki.hypr.land/configuring/layouts/dwindle-layout/ for more
@@ -246,6 +249,10 @@ for i = 1, 9 do
     hl.bind(mainMod .. " + " .. i,         hl.dsp.focus({ workspace = i }))
     hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
+
+-- 10. alan 0 tuşunda (eDP-1'de)
+hl.bind(mainMod .. " + 0",         hl.dsp.focus({ workspace = 10 }))
+hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
