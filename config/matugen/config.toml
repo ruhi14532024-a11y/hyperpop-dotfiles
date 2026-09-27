@@ -21,3 +21,8 @@ output_path = '/home/suleyman/.config/rofi/matugen.rasi'
 input_path = '/home/suleyman/.config/matugen/templates/rofi-fx'
 output_path = '/home/suleyman/.config/rofi/fx-colors'
 
+
+[templates.swaync]
+input_path = '/home/suleyman/.config/matugen/templates/swaync.css'
+output_path = '/home/suleyman/.config/swaync/matugen.css'
+post_hook = 'swaync-client --reload-css'

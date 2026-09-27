@@ -67,6 +67,7 @@ Then log out and back in (or `hyprctl reload`).
     ├── hypr/               # hyprland.lua, hyprlock.conf, Scripts/
     ├── rofi/               # theme, launcher, rofi-fx (C + binary)
     ├── waybar/             # config.jsonc + matugen-driven style.css
+    ├── swaync/             # notification center (matugen-aware)
     ├── matugen/            # config + templates + wallpaper.sh/lock.sh
     └── SelectWallpaper/    # Super+W gallery script
 ```
@@ -150,6 +151,7 @@ Sonra çıkış yapıp tekrar gir (veya `hyprctl reload`).
     ├── hypr/               # hyprland.lua, hyprlock.conf, Scripts/
     ├── rofi/               # tema, launcher, rofi-fx (C + binary)
     ├── waybar/             # config.jsonc + matugen stilli style.css
+    ├── swaync/             # bildirim merkezi (matugen uyumlu)
     ├── matugen/            # config + şablonlar + wallpaper.sh/lock.sh
     └── SelectWallpaper/    # Super+W galeri scripti
 ```

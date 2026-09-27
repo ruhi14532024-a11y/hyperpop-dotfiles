@@ -1,0 +1,127 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "ignore-gtk-theme": true,
+
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "layer-shell-cover-screen": false,
+
+  "cssPriority": "application",
+
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 0,
+
+  "control-center-width": 500,
+  "control-center-height": 600,
+  "notification-window-width": 500,
+
+  "fit-to-screen": true,
+  "transition-time": 200,
+
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+
+  "notification-2fa-action": true,
+  "notification-inline-replies": true,
+  "notification-grouping": true,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "image-visibility": "when-available",
+
+  "relative-timestamps": true,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "keyboard-shortcuts": true,
+  "text-empty": "Sin notificaciones",
+  "script-fail-notify": true,
+
+  "notification-visibility": {
+    "spotify-low": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+
+  "widgets": [
+    "title",
+    "backlight",
+    "volume",
+    "mpris",
+    "buttons-grid",
+    "inhibitors",
+    "dnd",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": "Centro de control",
+      "clear-all-button": true,
+      "button-text": "Limpiar todo"
+    },
+    "inhibitors": {
+      "text": "Inhibidores",
+      "button-text": "Limpiar todo",
+      "clear-all-button": true
+    },
+    "dnd": {
+      "text": "No molestar"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": ""
+    },
+    "mpris": {
+      "autohide": true,
+      "show-album-art": "always",
+      "loop-carousel": true
+    },
+    "volume": {
+      "label": "󰕾",
+      "tooltip": true
+    },
+    "backlight": {
+      "label": "󰃠",
+      "device": "amdgpu_bl1",
+      "tooltip": true
+    },
+    "buttons-grid": {
+      "buttons-per-row": 6,
+      "actions": [
+       {
+          "label": "󰖁",
+          "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+          "type": "toggle",
+          "status-command": "pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes' && echo muted || echo unmuted",
+          "status": {
+            "muted":   { "label": "󰖁" },
+            "unmuted": { "label": "󰕾" }
+          }
+        },
+        {
+          "type": "toggle",
+          "label": "󰍬",
+          "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+          "status-command": "pactl get-source-mute @DEFAULT_SOURCE@ | grep -q 'yes' && echo muted || echo unmuted",
+          "status": {
+            "muted":   { "label": "󰍭" },
+            "unmuted": { "label": "󰍬" }
+          }
+        },
+        {
+          "label": "󰤨",
+          "command": "nm-connection-editor"
+        }
+    
+      ]
+    }
+  }
+}
