@@ -113,22 +113,30 @@ tooltip label {
     padding: 4px;
 }
 
-/* ── dikey bar (sol/sağ): uzunlamasına ferah haplar ── */
+/* ── dikey bar (sol/sağ): üstteki gibi tek parça ince şerit ── */
 window#waybar.left #workspaces,
 window#waybar.right #workspaces {
-    padding: 0.4rem 0.25rem;
+    padding: 0.3rem 0.2rem;
 }
 
 window#waybar.left #workspaces button,
 window#waybar.right #workspaces button {
-    padding: 0.55rem 0.1rem;
-    margin: 0.28rem 0.3rem;
-    font-size: 14px;
-    min-width: 2.4rem;
+    padding: 0.35rem 0.1rem;
+    margin: 0.2rem 0.25rem;
+    font-size: 13px;
+    min-width: 1.9rem;
 }
 
 window#waybar.left #tray,
-window#waybar.right #tray,
+window#waybar.right #tray {
+    padding: 0.4rem 0.3rem;
+    margin: 0 0.35rem 0.4rem;
+    font-size: 13px;
+    background-color: @m_bar;
+    border: 1px solid @m_frame;
+    border-radius: 10px;
+}
+
 window#waybar.left #cpu,
 window#waybar.right #cpu,
 window#waybar.left #memory,
@@ -143,15 +151,30 @@ window#waybar.left #battery,
 window#waybar.right #battery,
 window#waybar.left #custom-power,
 window#waybar.right #custom-power {
-    padding: 0.65rem 0.5rem;
-    margin: 0.25rem 0.45rem;
-    font-size: 14px;
-    border: 1px solid @m_frame;
-    border-radius: 10px;
-    min-width: 3.2rem;
+    padding: 0.45rem 0.2rem;
+    margin: 0 0.35rem;
+    font-size: 13px;
+    background-color: @m_bar;
+    border: none;
+    border-left: 1px solid @m_frame;
+    border-right: 1px solid @m_frame;
+    border-radius: 0;
+    min-width: 0;
+}
+
+window#waybar.left #cpu,
+window#waybar.right #cpu {
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid @m_frame;
+}
+
+window#waybar.left #custom-power,
+window#waybar.right #custom-power {
+    border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid @m_frame;
 }
 
 window#waybar.left #clock,
 window#waybar.right #clock {
-    font-size: 15px;
+    font-size: 13px;
 }
